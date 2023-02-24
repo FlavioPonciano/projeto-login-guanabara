@@ -29,18 +29,18 @@ main {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden; /*Tudo o que está fora da borda fica escondido*/
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450);
 
     background-color: white;
     width: 250px;
-    height: 500px;
+    height: 515px;
     border-radius: 20px;
 
     /*Transition para dar um efeito na mudança de tela*/
     transition: width .3s, height 1s;
     transition-timing-function: ease;
+    transform: translate(-50%, -50%);
 }
 
 #login > #imagem {
@@ -62,5 +62,79 @@ main {
 }
 
 #formulario > p {
+    font-size: .8em;
+}
+
+form > .campo {
+    background: var(--cor-roxo);
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    margin: 5px 0px;
+}
+
+.campo > label {
+    display: none;
+}
+
+.campo > span {
+    color:white;
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+.campo > input {
+    background-color: #a8f5f2;
+    font-size: 1em;
+    width: calc(100% - 44px); /*fazendo calculo da largura da caixa */
+    height: calc(100% - 2px);
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+    transform: translate(43px, -41px); /*posso transformar a caixa para ajustar*/
+}
+
+.campo > input:focus-within { /*Quando eu estiver com o campo ativo ele vai ficar da cor que eu escolher*/
+    background-color: white;
+}
+
+form > input[type=submit] { /*Posso escolher o type do input que quero editar para que todos fiquem igauis caso seja necessário*/
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: var(--cor-verde);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form > input[type=submit]:hover {
+    background-color: #307775;
+}
+
+form > a.botao { /*no form o link que tiver a classe botao*/
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    padding-top: 5px;
+    margin-top: 5px;
+    background-color: white;
+    color: #307775;
+    border: 1px solid #49a09d;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+form > a.botao:hover {
+    background-color: #5bd6d2;
+}
+
+form > a.botao > span {
     font-size: .8em;
 }
