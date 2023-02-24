@@ -20,7 +20,7 @@ html, body {
 }
 
 main {
-    height: 100vh;
+    height:100vh;
     width: 100vw;
     position: relative;
 }
@@ -37,6 +37,10 @@ main {
     width: 250px;
     height: 500px;
     border-radius: 20px;
+
+    /*Transition para dar um efeito na mudança de tela*/
+    transition: width .3s, height 1s;
+    transition-timing-function: ease;
 }
 
 #login > #imagem {
@@ -50,4 +54,13 @@ main {
 #login > #formulario {
     display: block;
     padding: 10px;
+}
+
+#formulario > h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#formulario > p {
+    font-size: .8em;
 }
